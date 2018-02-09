@@ -10,4 +10,8 @@ Rails.application.routes.draw do
       end
     end
 
+   post '/login', to: 'auth#login'
+   get '/current_user', to: 'auth#currentUser'
+   post '/signup', to: 'auth#signup'
+
 end

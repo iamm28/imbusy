@@ -21,7 +21,7 @@ end
 20.times do
   Event.create(
     title: Faker::Friends.location,
-    date_time: Faker::Date.forward(30),
+    date_time: Faker::Time.forward(30, :morning),
     event_type: ["Work", "Social","Family"].sample,
     location_id: Random.rand(1...10)
   )

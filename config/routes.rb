@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :friend_requests
+  get 'friends/index'
+
+  get 'friends/destroy'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   namespace :api do
@@ -13,5 +18,9 @@ Rails.application.routes.draw do
    post '/login', to: 'auth#login'
    get '/current_user', to: 'auth#currentUser'
    post '/signup', to: 'auth#signup'
+
+   resources :friends
+   resources :friend_requests
+
 
 end
